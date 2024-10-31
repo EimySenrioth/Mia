@@ -1,0 +1,87 @@
+<!-- HTML visto en clase<!DOCTYPE html> -->
+<!-- <!DOCTYPE html>: 
+Doctype le dice al navegador que el documento está escrito en HTML5.
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <!-- 
+<html lang="en">
+Es el elemento raíz que indica que el contendio está en el idioma español
+ -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taco-San | Cocina Japonesa y Mexicana</title>
+    <link rel="stylesheet" href="MIa.css">
+</head>
+<!-- <head>
+    contiene informacion qe usa el navegador -->
+<body>
+    <!-- body es el área principal donde se coloca el contendo visible (texto, imágenes, párrafos, etc.) -->
+    <script src="MIa.js"></script>
+    <header>
+        <video autoplay muted loop playsinline class="background-video">
+            <source src="https://www.istockphoto.com/es/vídeo/amigas-brindando-en-un-restaurante-japonés-gm2167607696-587651361" type="video/mp4">
+        </video>
+        </div>
+        <h1>Taco-San</h1>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#menu">Menú</a></li>
+                <li><a href="#reservaciones">Reservaciones</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="inicio">
+        <h2>¡Bienvenido a Taco-San!</h2>
+        <p>Donde el arte culinario japonés y mexicano se fusionan en cada plato.</p>
+    </section>
+
+    <section id="menu">
+        <h2>Menú</h2>
+        <ul>
+            <li>Taco de Wagyu</li>
+            <li>Sashimi de Atún con Chile</li>
+            <li>Tepanyaki con Salsa de Jalapeño</li>
+        </ul>
+    </section>
+
+    <section id="reservaciones">
+        <h2>Reservaciones</h2>
+        <form id="formulario-reserva">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" required>
+
+            <label for="fecha">Fecha:</label>
+            <input type="date" id="fecha" required>
+
+            <button type="submit">Reservar</button>
+        </form>
+        <p id="mensaje-reserva"></p>
+    </section>
+
+    <section class="location">
+        <h7>Encuéntranos</h7>
+        <div class="map">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.6019654800384!2d139.70212477641926!3d35.67174847968525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188c9c60ef1d1d%3A0x3d12f44e5e0c57b6!2sHarajuku%2C%20Tokio%2C%20Jap%C3%B3n!5e0!3m2!1ses!2smx!4v1698600000000"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </section>
+
+
+    <section id="contacto">
+        <h2>Contáctanos</h2>
+        <p>Email: contacto@taco-san.com</p>
+        <p>Teléfono: +52 123 456 7890</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Taco-San. Todos los derechos reservados.</p>
+    </footer>
+
+
+</body>
+</html>
