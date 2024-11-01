@@ -13,16 +13,29 @@ body {
 }
 
 header {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    color: white; /* Texto en blanco para el header */
 }
 
-header h1 {
-    font-size: 2rem;
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
 }
 
+header h1,
+header nav {
+    position: relative;
+    z-index: 1;
+}
+
+/* Otros estilos globales */
 nav ul {
     list-style: none;
     padding: 0;
@@ -58,11 +71,13 @@ button:hover {
     background-color: #0056b3;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    background-color: #f5f5f5;
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
 }
+
 
 .hero {
     background-color: #333;
@@ -96,20 +111,11 @@ header {
     overflow: hidden;
 }
 
-.background-video {
-    position: absolute;
-    top: 0;
-    left: 0;
+header {
+    position: relative;
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
+    height: 100vh; /* Ocupa toda la pantalla */
+    overflow: hidden;
 }
 
-h1, nav {
-    position: relative;
-    color: white;
-    text-align: center;
-    margin-top: 20px;
-}
 

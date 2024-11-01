@@ -3,27 +3,19 @@
 Doctype le dice al navegador que el documento está escrito en HTML5.
 -->
 <!DOCTYPE html>
-<html lang="en">
-    <!-- 
-<html lang="en">
-Es el elemento raíz que indica que el contendio está en el idioma español
- -->
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Taco-San | Cocina Japonesa y Mexicana</title>
     <link rel="stylesheet" href="MIa.css">
 </head>
-<!-- <head>
-    contiene informacion qe usa el navegador -->
 <body>
-    <!-- body es el área principal donde se coloca el contendo visible (texto, imágenes, párrafos, etc.) -->
-    <script src="MIa.js"></script>
     <header>
-        <video autoplay muted loop playsinline class="background-video">
-            <source src="https://www.istockphoto.com/es/vídeo/amigas-brindando-en-un-restaurante-japonés-gm2167607696-587651361" type="video/mp4">
+        <video autoplay muted loop playsinline class="background-video" controls>
+            <source src="VR/restaurante.mp4" type="video/mp4">
+            Tu navegador no soporta videos.
         </video>
-        </div>
         <h1>Taco-San</h1>
         <nav>
             <ul>
@@ -34,6 +26,7 @@ Es el elemento raíz que indica que el contendio está en el idioma español
             </ul>
         </nav>
     </header>
+
     <section id="inicio">
         <h2>¡Bienvenido a Taco-San!</h2>
         <p>Donde el arte culinario japonés y mexicano se fusionan en cada plato.</p>
@@ -63,15 +56,13 @@ Es el elemento raíz que indica que el contendio está en el idioma español
     </section>
 
     <section class="location">
-        <h7>Encuéntranos</h7>
+        <h2>Encuéntranos</h2>
         <div class="map">
             <iframe 
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.6019654800384!2d139.70212477641926!3d35.67174847968525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188c9c60ef1d1d%3A0x3d12f44e5e0c57b6!2sHarajuku%2C%20Tokio%2C%20Jap%C3%B3n!5e0!3m2!1ses!2smx!4v1698600000000"
                 width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
     </section>
-
-
     <section id="contacto">
         <h2>Contáctanos</h2>
         <p>Email: contacto@taco-san.com</p>
@@ -82,6 +73,6 @@ Es el elemento raíz que indica que el contendio está en el idioma español
         <p>&copy; 2024 Taco-San. Todos los derechos reservados.</p>
     </footer>
 
-
+    <script src="MIa.js"></script>
 </body>
 </html>
