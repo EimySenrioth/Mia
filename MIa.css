@@ -9,14 +9,22 @@
 body {
     background-color: #f5f5f5;
     color: #333;
-    padding: 20px;
+    padding: 0;
+    margin: 0;
 }
 
 header {
     position: relative;
+    display: flex; /* Agregar display flex */
+    width: 100%;
     height: 100vh;
     overflow: hidden;
     color: white; /* Texto en blanco para el header */
+    /*ajuste para le difuminacion*/
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .background-video {
@@ -29,16 +37,100 @@ header {
     z-index: -1;
 }
 
+/* Capa de superposición para oscurecer el video */
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(54, 54, 54, 0.5); /* Ajusta la opacidad para cambiar el nivel de oscurecimiento */
+    z-index: 0; /*ajuste de 1 a 0*/
+}
+
 header h1,
 header nav {
     position: relative;
     z-index: 1;
 }
 
-/* Otros estilos globales */
+/*Acerca de nosotros*/
+.welcome-section {
+    width: 100%;
+    height: 100vh; /* Cambiado de min-height a height */
+    background-color: #000;
+    color: #fff;
+    font-family: 'Shippori Mincho', serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+.welcome-section h2 {
+    font-size: 2.5em;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #f0f0f0; /* Color blanco */
+}
+
+.welcome-section p {
+    font-size: 1.3em;
+    line-height: 1.6;
+    color: #e0e0e0; /* Un tono de blanco más suave para el texto secundario */
+    padding: 0; /* Quitar cualquier padding adicional */
+    margin: 0; /* Sin márgenes adicionales */
+}
+
+/* Estilos del menú */
+.menu-container {
+    display: flex; /* Usamos flexbox para facilitar la alineación */
+    flex-direction: column; /* Colocamos los elementos en columna */
+    align-items: flex-start; /* Alineamos todos los elementos al inicio (izquierda) */
+}
+
+.menu-title {
+    align-self: flex-end; /* Alineamos el título del menú a la derecha */
+    margin-bottom: 20px; /* Espacio debajo del título del menú */
+}
+
+/* Estilo base para el parallax */
+.parallax {
+    position: relative;
+    overflow: hidden;
+}
+
+.menu-item {
+    min-height: 800px; /* Ajusta la altura según sea necesario */
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white; /* Color del texto */
+}
+
+#taco-wagyu {
+    background-image: url(BANCOim/FONDO.jpg); 
+}
+
+#sashimi-atun {
+    background-image: url(BANCOim/japon.webp); 
+}
+
+#tepanyaki {
+    background-image: url(BANCOim/fondo2.jpg); 
+}
+
+/* Navegacion */
 nav ul {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 nav ul li {
@@ -51,11 +143,12 @@ nav ul li a {
     text-decoration: none;
 }
 
+/* Otros ajustes */
 section {
-    margin: 20px 0;
-    padding: 15px;
-    background-color: white;
-    border-radius: 8px;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(247, 247, 247);
+   
 }
 
 button {
@@ -71,51 +164,137 @@ button:hover {
     background-color: #0056b3;
 }
 
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
+/* Estilos para la barra de reservación */
+.barra-reserva {
+    position: fixed;
+    bottom: -100px; /* Inicialmente oculta debajo de la página */
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: bottom 0.5s ease-in-out;
+    z-index: 1000;
 }
+
+.barra-reserva.visible {
+    bottom: 0; /* Cuando está visible */
+}
+
+#formulario-reserva {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#formulario-reserva label {
+    font-weight: 500;
+    color: #333;
+}
+
+#formulario-reserva input {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+#formulario-reserva button {
+    background-color: #e44d26;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#formulario-reserva button:hover {
+    background-color: #d44020;
+}
+
+/* Estilos responsive */
+@media (max-width: 768px) {
+    #formulario-reserva {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .barra-reserva {
+        padding: 15px;
+    }
+}
+
+/* Estilos para la seccion de fotos dinamicas */
+
+.fotos-dinamicas {
+    text-align: center;
+    padding: 0; /* Eliminando el espaciado superior e inferior */
+    background-color: #f5f5f5; /* Color de fondo */
+}
+
+.fotos-dinamicas h2 {
+    margin-bottom: 20px; /* Espacio debajo del título */
+}
+
+.galeria {
+    display: flex; /* Usar flexbox para centrar contenido */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    position: relative; /* Permite posicionar las imágenes */
+    width: 100%; /* Ancho completo para el contenedor */
+    height: 600px; /* Altura fija para el contenedor */
+    overflow: hidden; /* Oculta las imágenes que se salen del contenedor */
+}
+
+.foto {
+    position: absolute; /* Posiciona las imágenes de forma absoluta */
+    width: auto; /* Deja que el ancho se ajuste automáticamente */
+    height: 100%; /* Altura fija a 600px */
+    object-fit: contain; /* Mantiene la proporción y muestra la imagen completa */
+    opacity: 0; /* Inicialmente ocultas */
+    transition: opacity 1s ease; /* Transición para el efecto de aparición */
+}
+
+.foto.active {
+    opacity: 1; /* Solo la imagen activa es visible */
+}
+
 
 
 .hero {
     background-color: #333;
-    color: white;
+    color: rgb(255, 255, 255);
+    border: 0;
     text-align: center;
     padding: 50px 0;
 }
 
 .about, .location {
-    padding: 20px;
-    max-width: 800px;
+    width: 100%;
+    
+    padding: 100px;
+    max-width: 1000px;
     margin: auto;
 }
-
+/* map desing */
 .map iframe {
     width: 100%;
     height: 400px;
     border: 0;
+    background-color: white;
 }
 
 footer {
-    background-color: #333;
+    background-color: #000000;
     color: white;
     text-align: center;
     padding: 10px 0;
 }
 
-header {
-    position: relative;
-    height: 100vh;
-    overflow: hidden;
-}
 
-header {
-    position: relative;
-    width: 100%;
-    height: 100vh; /* Ocupa toda la pantalla */
-    overflow: hidden;
-}
 
 

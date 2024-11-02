@@ -11,11 +11,12 @@ Doctype le dice al navegador que el documento está escrito en HTML5.
     <link rel="stylesheet" href="MIa.css">
 </head>
 <body>
-    <header>
+    <header class="header">
         <video autoplay muted loop playsinline class="background-video" controls>
-            <source src="VR/restaurante.mp4" type="video/mp4">
+            <source src="VR/video-restaurante.mp4" type="video/mp4">
             Tu navegador no soporta videos.
         </video>
+        <div class="overlay"></div>
         <h1>Taco-San</h1>
         <nav>
             <ul>
@@ -27,33 +28,49 @@ Doctype le dice al navegador que el documento está escrito en HTML5.
         </nav>
     </header>
 
-    <section id="inicio">
+    <section class="welcome-section" id="inicio">
         <h2>¡Bienvenido a Taco-San!</h2>
         <p>Donde el arte culinario japonés y mexicano se fusionan en cada plato.</p>
     </section>
 
-    <section id="menu">
-        <h2>Menú</h2>
-        <ul>
-            <li>Taco de Wagyu</li>
-            <li>Sashimi de Atún con Chile</li>
-            <li>Tepanyaki con Salsa de Jalapeño</li>
-        </ul>
+    <section class="fotos-dinamicas" id="fotos-dinamicas">
+        <div class="galeria">
+            <img src="BANCOim/White Grand Opening Taco San.png"  class="foto">
+            <img src="BANCOim/Food Promotion.png" class="foto">
+            <img src="BANCOim/Red Yellow Illustration Modern Food Ramen Promotion Flyer.png" class="foto">
+        </div>
     </section>
+    
 
-    <section id="reservaciones">
-        <h2>Reservaciones</h2>
-        <form id="formulario-reserva">
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" required>
-
-            <label for="fecha">Fecha:</label>
-            <input type="date" id="fecha" required>
-
-            <button type="submit">Reservar</button>
-        </form>
-        <p id="mensaje-reserva"></p>
+    <!-- Sección del Menú -->
+    <section class="parallax" id="menu">
+        <div class="menu-container">
+            <h2 class="menu-title">Menú</h2>
+        </div>
+    
+        <div class="menu-item" id="taco-wagyu">
+            <div class="item-content">
+                <h3>Taco de Wagyu</h3>
+                <p>Disfruta de nuestro taco de wagyu, una experiencia culinaria única.</p>
+            </div>
+        </div>
+    
+        <div class="menu-item" id="sashimi-atun">
+            <div class="item-content">
+                <h3>Sashimi de Atún con Chile</h3>
+                <p>Un plato fresco y vibrante que combina lo mejor de Japón y México.</p>
+            </div>
+        </div>
+    
+        <div class="menu-item" id="tepanyaki">
+            <div class="item-content">
+                <h3>Tepanyaki con Salsa de Jalapeño</h3>
+                <p>Deliciosas opciones de teppanyaki con un toque picante.</p>
+            </div>
+        </div>
     </section>
+    
+<!-- Barra de reservación fija al pie de la página -->
 
     <section class="location">
         <h2>Encuéntranos</h2>
@@ -63,6 +80,7 @@ Doctype le dice al navegador que el documento está escrito en HTML5.
                 width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
     </section>
+
     <section id="contacto">
         <h2>Contáctanos</h2>
         <p>Email: contacto@taco-san.com</p>
@@ -74,5 +92,33 @@ Doctype le dice al navegador que el documento está escrito en HTML5.
     </footer>
 
     <script src="MIa.js"></script>
+    <script>
+        // JavaScript para mostrar la modal cuando se desplaza a la sección del menú
+        const modal = document.getElementById('modal-reservacion');
+        const menuSection = document.getElementById('menu');
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    modal.classList.add('show');
+                } else {
+                    modal.classList.remove('show');
+                }
+            });
+        }, { threshold: 0.5 });
+
+        observer.observe(menuSection);
+    </script>
+
+    <!-- Barra de reservación -->
+    <div class="barra-reserva">
+        <form id="formulario-reserva">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" required>
+            <label for="fecha">Fecha:</label>
+            <input type="date" id="fecha" required>
+            <button type="submit">Reservar</button>
+        </form>
+    </div>
 </body>
 </html>
