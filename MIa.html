@@ -10,6 +10,8 @@ Doctype le dice al navegador que el documento está escrito en HTML5.
     <title>Taco-San | Cocina Japonesa y Mexicana</title>
     <link rel="stylesheet" href="MIa.css">
 </head>
+
+<!-- Sección del Menú -->
 <body>
     <header class="header">
         <video autoplay muted loop playsinline class="background-video" controls>
@@ -28,21 +30,22 @@ Doctype le dice al navegador que el documento está escrito en HTML5.
         </nav>
     </header>
 
+    <!-- Welcome -->
     <section class="welcome-section" id="inicio">
         <h2>¡Bienvenido a Taco-San!</h2>
         <p>Donde el arte culinario japonés y mexicano se fusionan en cada plato.</p>
     </section>
 
+<!-- Sección de promociones -->
     <section class="fotos-dinamicas" id="fotos-dinamicas">
         <div class="galeria">
-            <img src="BANCOim/White Grand Opening Taco San.png"  class="foto">
+            <img src="BANCOim/Home.png"  class="foto">
             <img src="BANCOim/Food Promotion.png" class="foto">
             <img src="BANCOim/Red Yellow Illustration Modern Food Ramen Promotion Flyer.png" class="foto">
         </div>
     </section>
     
-
-    <!-- Sección del Menú -->
+    <!-- Menú -->
     <section class="parallax" id="menu">
         <div class="menu-container">
             <h2 class="menu-title">Menú</h2>
@@ -70,8 +73,7 @@ Doctype le dice al navegador que el documento está escrito en HTML5.
         </div>
     </section>
     
-<!-- Barra de reservación fija al pie de la página -->
-
+<!-- Map -->
     <section class="location">
         <h2>Encuéntranos</h2>
         <div class="map">
@@ -81,6 +83,7 @@ Doctype le dice al navegador que el documento está escrito en HTML5.
         </div>
     </section>
 
+    <!-- Pie de pagina -->
     <section id="contacto">
         <h2>Contáctanos</h2>
         <p>Email: contacto@taco-san.com</p>
@@ -92,23 +95,6 @@ Doctype le dice al navegador que el documento está escrito en HTML5.
     </footer>
 
     <script src="MIa.js"></script>
-    <script>
-        // JavaScript para mostrar la modal cuando se desplaza a la sección del menú
-        const modal = document.getElementById('modal-reservacion');
-        const menuSection = document.getElementById('menu');
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    modal.classList.add('show');
-                } else {
-                    modal.classList.remove('show');
-                }
-            });
-        }, { threshold: 0.5 });
-
-        observer.observe(menuSection);
-    </script>
 
     <!-- Barra de reservación -->
     <div class="barra-reserva">

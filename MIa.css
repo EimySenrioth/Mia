@@ -230,38 +230,37 @@ button:hover {
 
 /* Estilos para la seccion de fotos dinamicas */
 
+/* Estilos para la sección de fotos dinámicas */
 .fotos-dinamicas {
-    text-align: center;
-    padding: 0; /* Eliminando el espaciado superior e inferior */
-    background-color: #f5f5f5; /* Color de fondo */
-}
-
-.fotos-dinamicas h2 {
-    margin-bottom: 20px; /* Espacio debajo del título */
+    margin: 0; /* Elimina márgenes */
+    padding: 0; /* Elimina el espaciado superior e inferior */
+    width: 100vw; /* Ancho completo de la ventana */
+    height: 100vh; /* Altura completa de la ventana */
+    overflow: hidden; /* Oculta cualquier contenido que se salga del contenedor */
 }
 
 .galeria {
-    display: flex; /* Usar flexbox para centrar contenido */
+    display: flex; /* Usar flexbox para posicionar el contenido */
     justify-content: center; /* Centrar horizontalmente */
     align-items: center; /* Centrar verticalmente */
-    position: relative; /* Permite posicionar las imágenes */
-    width: 100%; /* Ancho completo para el contenedor */
-    height: 600px; /* Altura fija para el contenedor */
-    overflow: hidden; /* Oculta las imágenes que se salen del contenedor */
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Altura completa */
+    position: relative; /* Para posicionar las imágenes de forma absoluta */
 }
 
 .foto {
-    position: absolute; /* Posiciona las imágenes de forma absoluta */
-    width: auto; /* Deja que el ancho se ajuste automáticamente */
-    height: 100%; /* Altura fija a 600px */
-    object-fit: contain; /* Mantiene la proporción y muestra la imagen completa */
+    position: absolute; /* Las imágenes se colocan encima de otras */
+    width: 100%; /* Ancho completo de la pantalla */
+    height: 100%; /* Altura completa de la pantalla */
+    object-fit: cover; /* Las imágenes se expanden para llenar el contenedor */
     opacity: 0; /* Inicialmente ocultas */
     transition: opacity 1s ease; /* Transición para el efecto de aparición */
 }
 
 .foto.active {
-    opacity: 1; /* Solo la imagen activa es visible */
+    opacity: 1; /* La imagen activa es visible */
 }
+
 
 
 
@@ -280,6 +279,7 @@ button:hover {
     max-width: 1000px;
     margin: auto;
 }
+
 /* map desing */
 .map iframe {
     width: 100%;
