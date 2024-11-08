@@ -4,6 +4,7 @@ Doctype le dice al navegador que el documento está escrito en HTML5.
 -->
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,8 +12,8 @@ Doctype le dice al navegador que el documento está escrito en HTML5.
     <link rel="stylesheet" href="MIa.css">
 </head>
 
-<!-- Sección del Menú -->
 <body>
+    <!-- Encabezado con video de fondo y navegación -->
     <header class="header">
         <video autoplay muted loop playsinline class="background-video" controls>
             <source src="VR/video-restaurante.mp4" type="video/mp4">
@@ -30,71 +31,78 @@ Doctype le dice al navegador que el documento está escrito en HTML5.
         </nav>
     </header>
 
-    <!-- Welcome -->
-    <section class="welcome-section" id="inicio">
-        <h2>¡Bienvenido a Taco-San!</h2>
-        <p>Donde el arte culinario japonés y mexicano se fusionan en cada plato.</p>
-    </section>
+    <!-- Contenido principal de la página -->
+    <main id="main">
 
-<!-- Sección de promociones -->
-    <section class="fotos-dinamicas" id="fotos-dinamicas">
-        <div class="galeria">
-            <img src="BANCOim/Home.png"  class="foto">
-            <img src="BANCOim/Food Promotion.png" class="foto">
-            <img src="BANCOim/Red Yellow Illustration Modern Food Ramen Promotion Flyer.png" class="foto">
-        </div>
-    </section>
-    
-    <!-- Menú -->
-    <section class="parallax" id="menu">
-        <div class="menu-container">
-            <h2 class="menu-title">Menú</h2>
-        </div>
-    
-        <div class="menu-item" id="taco-wagyu">
-            <div class="item-content">
-                <h3>Taco de Wagyu</h3>
-                <p>Disfruta de nuestro taco de wagyu, una experiencia culinaria única.</p>
-            </div>
-        </div>
-    
-        <div class="menu-item" id="sashimi-atun">
-            <div class="item-content">
-                <h3>Sashimi de Atún con Chile</h3>
-                <p>Un plato fresco y vibrante que combina lo mejor de Japón y México.</p>
-            </div>
-        </div>
-    
-        <div class="menu-item" id="tepanyaki">
-            <div class="item-content">
-                <h3>Tepanyaki con Salsa de Jalapeño</h3>
-                <p>Deliciosas opciones de teppanyaki con un toque picante.</p>
-            </div>
-        </div>
-    </section>
-    
-<!-- Map -->
-    <section class="location">
-        <h2>Encuéntranos</h2>
-        <div class="map">
-            <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.6019654800384!2d139.70212477641926!3d35.67174847968525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188c9c60ef1d1d%3A0x3d12f44e5e0c57b6!2sHarajuku%2C%20Tokio%2C%20Jap%C3%B3n!5e0!3m2!1ses!2smx!4v1698600000000"
-                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-        </div>
-    </section>
+        <!-- Sección de Bienvenida -->
+        <section class="welcome-section" id="inicio">
+            <h2>¡Bienvenido a Taco-San!</h2>
+            <p>Donde el arte culinario japonés y mexicano se fusionan en cada plato.</p>
+        </section>
 
-    <!-- Pie de pagina -->
-    <section id="contacto">
-        <h2>Contáctanos</h2>
-        <p>Email: contacto@taco-san.com</p>
-        <p>Teléfono: +52 123 456 7890</p>
-    </section>
+        <!-- Sección de Promociones -->
+        <section class="fotos-dinamicas" id="fotos-dinamicas">
+            <div class="galeria">
+                <img src="BANCOim/Home.png" class="foto" alt="Promoción principal">
+                <img src="BANCOim/Food Promotion.png" class="foto" alt="Promoción de comida">
+                <img src="BANCOim/Red Yellow Illustration Modern Food Ramen Promotion Flyer.png" class="foto" alt="Promoción de ramen">
+            </div>
+        </section>
 
+        <!-- Sección de Menú -->
+        <section class="parallax" id="menu">
+            <div class="menu-container">
+                <h2 class="menu-title">Menú</h2>
+            </div>
+
+            <!-- Item de Menú: Taco de Wagyu -->
+            <div class="menu-item" id="taco-wagyu">
+                <div class="item-content">
+                    <h3>Taco de Wagyu</h3>
+                    <p>Disfruta de nuestro taco de wagyu, una experiencia culinaria única.</p>
+                </div>
+            </div>
+
+            <!-- Item de Menú: Sashimi de Atún con Chile -->
+            <div class="menu-item" id="sashimi-atun">
+                <div class="item-content">
+                    <h3>Sashimi de Atún con Chile</h3>
+                    <p>Un plato fresco y vibrante que combina lo mejor de Japón y México.</p>
+                </div>
+            </div>
+
+            <!-- Item de Menú: Tepanyaki con Salsa de Jalapeño -->
+            <div class="menu-item" id="tepanyaki">
+                <div class="item-content">
+                    <h3>Tepanyaki con Salsa de Jalapeño</h3>
+                    <p>Deliciosas opciones de teppanyaki con un toque picante.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mapa de ubicación -->
+        <section class="location">
+            <h2>Encuéntranos</h2>
+            <div class="map">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.6019654800384!2d139.70212477641926!3d35.67174847968525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188c9c60ef1d1d%3A0x3d12f44e5e0c57b6!2sHarajuku%2C%20Tokio%2C%20Jap%C3%B3n!5e0!3m2!1ses!2smx!4v1698600000000"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </section>
+
+        <!-- Sección de contacto -->
+        <section id="contacto">
+            <h2>Contáctanos</h2>
+            <p>Email: contacto@taco-san.com</p>
+            <p>Teléfono: +52 123 456 7890</p>
+        </section>
+
+    </main>
+
+    <!-- Pie de página -->
     <footer>
         <p>&copy; 2024 Taco-San. Todos los derechos reservados.</p>
     </footer>
-
-    <script src="MIa.js"></script>
 
     <!-- Barra de reservación -->
     <div class="barra-reserva">
@@ -106,5 +114,9 @@ Doctype le dice al navegador que el documento está escrito en HTML5.
             <button type="submit">Reservar</button>
         </form>
     </div>
+
+    <!-- Archivo JavaScript -->
+    <script src="MIa.js"></script>
 </body>
+
 </html>
