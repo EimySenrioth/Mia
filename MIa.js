@@ -75,5 +75,42 @@ document.addEventListener('DOMContentLoaded', () => {
     setInterval(mostrarFoto, 3000);
 });
 
+// Selecciona los contenedores y las imágenes para ambas secciones
+const containerTaco = document.querySelector('#taco-wagyu');
+const imgTaco = containerTaco.querySelector('img');
+
+const containerSashimi = document.querySelector('#sashimi-atun');
+const imgSashimi = containerSashimi.querySelector('img');
+
+const containertepanyaki = document.querySelector('#tepanyaki');
+const imgtepanyaki = containerSashimi.querySelector('img');
+
+// Script para la animación del texto flotante
+document.addEventListener('DOMContentLoaded', () => {
+    // Selecciona todos los elementos floating-text
+    const floatingTexts = document.querySelectorAll('.floating-text');
+    
+    if (floatingTexts.length === 0) {
+        console.error('Elementos .floating-text no encontrados');
+        return;
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate-slide');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.5
+    });
+
+    // Observa cada elemento floating-text
+    floatingTexts.forEach(text => {
+        observer.observe(text);
+    });
+});
+
 
 

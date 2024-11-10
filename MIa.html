@@ -10,12 +10,15 @@ Doctype le dice al navegador que el documento está escrito en HTML5.
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Taco-San | Cocina Japonesa y Mexicana</title>
     <link rel="stylesheet" href="MIa.css">
+    <!-- Agregar Google Font para estilo japonés -->
+    <link href="https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap" rel="stylesheet">
+</head>
 </head>
 
 <body>
     <!-- Encabezado con video de fondo y navegación -->
     <header class="header">
-        <video autoplay muted loop playsinline class="background-video" controls>
+        <video autoplay muted loop playsinline class="background-video" id="background-video">
             <source src="VR/video-restaurante.mp4" type="video/mp4">
             Tu navegador no soporta videos.
         </video>
@@ -57,26 +60,37 @@ Doctype le dice al navegador que el documento está escrito en HTML5.
 
             <!-- Item de Menú: Taco de Wagyu -->
             <div class="menu-item" id="taco-wagyu">
+                <img src="BANCOim/taco-de-wagyu.png" class="hover-image" alt="Imagen de Taco de Wagyu">
                 <div class="item-content">
                     <h3>Taco de Wagyu</h3>
                     <p>Disfruta de nuestro taco de wagyu, una experiencia culinaria única.</p>
+                    <p class="price">¥1,500</p>
                 </div>
+                <!-- Texto flotante en japonés -->
+                <span class="floating-text">タコ・和牛</span>
             </div>
 
             <!-- Item de Menú: Sashimi de Atún con Chile -->
             <div class="menu-item" id="sashimi-atun">
+                <img src="BANCOim/sashimi-de-atun-con-chile-icon.webp" class="hover-image" alt="Imagen de Sashimi de Atún">
                 <div class="item-content">
                     <h3>Sashimi de Atún con Chile</h3>
-                    <p>Un plato fresco y vibrante que combina lo mejor de Japón y México.</p>
+                    <p>Disfruta de nuestro taco de wagyu, una experiencia culinaria única.</p>
+                    <p class="price">¥2,500</p>
                 </div>
+                <!-- Texto flotante en japonés -->
+                <span class="floating-text">チリ付きマグロの刺身</span>
             </div>
 
             <!-- Item de Menú: Tepanyaki con Salsa de Jalapeño -->
             <div class="menu-item" id="tepanyaki">
+                <img src="BANCOim/tepanyaki-con-salsa-de-jalapeño-icon.webp" class="hover-image" alt="Imagen de Tepanyaki">
                 <div class="item-content">
                     <h3>Tepanyaki con Salsa de Jalapeño</h3>
                     <p>Deliciosas opciones de teppanyaki con un toque picante.</p>
+                    <p class="price">¥1,500</p>
                 </div>
+                <span class="floating-text">鉄板焼き</span>
             </div>
         </section>
 
