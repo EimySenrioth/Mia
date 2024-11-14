@@ -13,7 +13,6 @@ Doctype le dice al navegador que el documento está escrito en HTML5.
     <!-- Agregar Google Font para estilo japonés -->
     <link href="https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap" rel="stylesheet">
 </head>
-</head>
 
 <body>
     <!-- Encabezado con video de fondo y navegación -->
@@ -23,26 +22,65 @@ Doctype le dice al navegador que el documento está escrito en HTML5.
             Tu navegador no soporta videos.
         </video>
         <div class="overlay"></div>
-        <h1>Taco-San</h1>
+        <!-- Texto y botones con iconos en la parte superior -->
+        <div class="top-text">
+            <a href="https://translate.google.com/?sl=es&tl=ja&op=translate" target="_blank" class="translate-button" aria-label="Google Translate">
+                <img src="BANCOim/traducir.png" alt="Google Translate">
+                <span class="translate-text">Click para traducir</span>
+            </a>
+            <a href="https://line.me/ti/p/~your-line-id" target="_blank" class="line-button" aria-label="LINE">
+                <img src="BANCOim/line.png" alt="LINE">
+                <span class="line-text">Redes sociales</span> <!-- Texto encima del icono -->
+            </a>
+        </div>
+        <h1>
+            <span class="main-title">タコ・サン</span>
+            <span class="floating-text-1">さらに、メキシコ大使館が作成した地図も便利です。これには</span>
+            <span class="floating-text-2">チップスなどのメキシコ料理が日本でどのように人気を集めているかが説明されています</span>
+
+            <span class="floating-text-japan-number">+81 123-4567-8901</span>
+            <span class="floating-text-japan-label">Llamada local, Japón</span>
+            
+            <span class="floating-text-international-number">+52 987-6543-210</span>
+            <span class="floating-text-international-label">Llamada internacional</span>
+
+            <span class="floating-text-reservation">
+                Para reservaciones y preguntas, llámenos a alguno de los números. <br>
+                Si es extranjero, haga clic en el menú para turistas. <br>
+                Para más información, contáctenos por Line
+            </span>
+        </h1>
         <nav>
             <ul>
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#menu">Menú</a></li>
-                <li><a href="#reservaciones">Reservaciones</a></li>
+                <li><a href="turista/Mia-turistas.html" target="_blank">Turistas</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
         </nav>
+         <!-- Botones en el header -->
+         <div class="header-buttons">
+            <!-- Botón para reservas online -->
+            <a href="formulario/Mia-formulario.html" class="reservation-button" aria-label="Online Reservation">
+                <button>Online Reservation Here</button>
+            </a>
+            </div>
     </header>
 
-    <!-- Contenido principal de la página -->
     <main id="main">
+            <!-- Sección de Reservaciones -->
+    <section id="reservaciones">
+        <!-- Contenido de la Sección Reservaciones -->
+        <h2>Realiza tu reservación</h2>
+    </section>
 
         <!-- Sección de Bienvenida -->
-        <section class="welcome-section" id="inicio">
+        <section class="welcome" id="inicio">
             <h2>¡Bienvenido a Taco-San!</h2>
             <p>Donde el arte culinario japonés y mexicano se fusionan en cada plato.</p>
         </section>
-
+        
+  
         <!-- Sección de Promociones -->
         <section class="fotos-dinamicas" id="fotos-dinamicas">
             <div class="galeria">
