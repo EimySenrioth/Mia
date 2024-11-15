@@ -6,20 +6,23 @@
     font-family: 'Arial', sans-serif;
 }
 
-html, body {
+html,
+body {
     margin: 0;
     padding: 0;
     height: 100%;
-    overflow-x: hidden; /* Evita desplazamiento horizontal inesperado */
+    overflow-x: hidden;
+    /* Evita desplazamiento horizontal inesperado */
 }
 
 header {
     position: relative;
-    display: flex; 
+    display: flex;
     width: 100%;
     height: 100vh;
     overflow: hidden;
-    color: white; /* Texto en blanco para el header */
+    color: white;
+    /* Texto en blanco para el header */
     /*ajuste para la difuminación*/
     flex-direction: column;
     justify-content: center;
@@ -34,7 +37,8 @@ header {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    z-index: -1; /* Fondo con z-index -1 para estar detrás de otros elementos */
+    z-index: -1;
+    /* Fondo con z-index -1 para estar detrás de otros elementos */
 }
 
 /* Capa de superposición para oscurecer el video */
@@ -46,14 +50,17 @@ header {
     height: 100%;
     margin: 0;
     padding: 0;
-    background-color: rgba(54, 54, 54, 0.5); /* Ajusta la opacidad para cambiar el nivel de oscurecimiento */
-    z-index: 0; /* Capa de superposición por encima del video */
+    background-color: rgba(54, 54, 54, 0.5);
+    /* Ajusta la opacidad para cambiar el nivel de oscurecimiento */
+    z-index: 0;
+    /* Capa de superposición por encima del video */
 }
 
 /* Estilo para el título h1 */
 header h1 {
     position: relative;
-    z-index: 2; /* Asegura que el título esté sobre el video y la superposición */
+    z-index: 2;
+    /* Asegura que el título esté sobre el video y la superposición */
     top: -320px;
     left: -850px;
     font-size: 3rem;
@@ -62,8 +69,10 @@ header h1 {
 
 /* Estilo específico para el texto principal "タコ・サン" en vertical */
 header h1 .main-title {
-    writing-mode: vertical-rl; /* Texto en vertical de derecha a izquierda */
-    text-orientation: upright; /* Mantiene cada carácter en posición vertical */
+    writing-mode: vertical-rl;
+    /* Texto en vertical de derecha a izquierda */
+    text-orientation: upright;
+    /* Mantiene cada carácter en posición vertical */
     font-size: 3rem;
     color: #fff;
 }
@@ -76,7 +85,8 @@ header h1 .floating-text-1 {
     font-weight: bold;
     top: -10px;
     left: 1600px;
-    writing-mode: horizontal-tb; /* Orientación horizontal para el texto flotante */
+    writing-mode: horizontal-tb;
+    /* Orientación horizontal para el texto flotante */
 }
 
 /* Estilo específico para el segundo texto flotante en orientación horizontal */
@@ -87,46 +97,61 @@ header h1 .floating-text-2 {
     font-weight: bold;
     top: -44px;
     left: 1200px;
-    writing-mode: horizontal-tb; /* Orientación horizontal para el texto flotante */
+    writing-mode: horizontal-tb;
+    /* Orientación horizontal para el texto flotante */
     white-space: nowrap;
 }
 
 /* Número de teléfono de Japón */
 header h1 .floating-text-japan-number {
     position: absolute;
-    top: -1px; /* Ajusta según la posición deseada */
-    left: 780px; /* Ajusta según la posición deseada */
+    top: -1px;
+    /* Ajusta según la posición deseada */
+    left: 780px;
+    /* Ajusta según la posición deseada */
     color: white;
     font-size: 1.498rem;
     font-weight: bold;
-    z-index: 2; /* Asegura que esté sobre otros elementos */
-    writing-mode: horizontal-tb; /* Mantiene orientación horizontal */
-    white-space: nowrap; /* Evita que el texto se divida en múltiples líneas */
+    z-index: 2;
+    /* Asegura que esté sobre otros elementos */
+    writing-mode: horizontal-tb;
+    /* Mantiene orientación horizontal */
+    white-space: nowrap;
+    /* Evita que el texto se divida en múltiples líneas */
 }
 
 /* Etiqueta para llamada local en Japón */
 header h1 .floating-text-japan-label {
     position: absolute;
-    top: 30px; /* Ajusta para que quede debajo del número */
+    top: 30px;
+    /* Ajusta para que quede debajo del número */
     left: 840px;
     color: white;
     font-size: 0.6rem;
-    z-index: 2; /* Asegura que esté sobre otros elementos */
-    writing-mode: horizontal-tb; /* Mantiene orientación horizontal */
-    white-space: nowrap; /* Evita que el texto se divida en múltiples líneas */
+    z-index: 2;
+    /* Asegura que esté sobre otros elementos */
+    writing-mode: horizontal-tb;
+    /* Mantiene orientación horizontal */
+    white-space: nowrap;
+    /* Evita que el texto se divida en múltiples líneas */
 }
 
 /* Número de teléfono internacional */
 header h1 .floating-text-international-number {
     position: absolute;
-    top: 0px; /* Ajusta verticalmente según la necesidad */
-    left: 1010px; /* Ajusta horizontalmente según la necesidad */
+    top: 0px;
+    /* Ajusta verticalmente según la necesidad */
+    left: 1010px;
+    /* Ajusta horizontalmente según la necesidad */
     color: white;
     font-size: 1.498rem;
     font-weight: bold;
-    z-index: 2; /* Asegura que esté sobre otros elementos */
-    writing-mode: horizontal-tb; /* Mantiene orientación horizontal */
-    white-space: nowrap; /* Evita que el texto se divida en múltiples líneas */
+    z-index: 2;
+    /* Asegura que esté sobre otros elementos */
+    writing-mode: horizontal-tb;
+    /* Mantiene orientación horizontal */
+    white-space: nowrap;
+    /* Evita que el texto se divida en múltiples líneas */
 }
 
 
@@ -137,36 +162,44 @@ header h1 .floating-text-international-label {
     left: 1055px;
     color: white;
     font-size: 0.6rem;
-    z-index: 2; /* Asegura que esté sobre otros elementos */
-    writing-mode: horizontal-tb; /* Mantiene orientación horizontal */
-    white-space: nowrap; /* Evita que el texto se divida en múltiples líneas */
+    z-index: 2;
+    /* Asegura que esté sobre otros elementos */
+    writing-mode: horizontal-tb;
+    /* Mantiene orientación horizontal */
+    white-space: nowrap;
+    /* Evita que el texto se divida en múltiples líneas */
 }
 
 .floating-text-reservation {
     position: absolute;
     top: 77px;
-    left: 890px; /* Cambiado para alinear a la izquierda con los otros elementos */
+    left: 890px;
+    /* Cambiado para alinear a la izquierda con los otros elementos */
     color: white;
     font-size: 0.6rem;
     font-weight: bold;
     text-align: right;
-    width: 600px; /* Ancho fijo para mantener las tres líneas organizadas */
+    width: 600px;
+    /* Ancho fijo para mantener las tres líneas organizadas */
     line-height: 1.3;
-    z-index: 2; /* Mantener consistencia con los otros elementos */
+    z-index: 2;
+    /* Mantener consistencia con los otros elementos */
     display: inline-block;
     padding: 0;
     margin: 0;
     min-height: fit-content;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-    transform: none; /* Eliminado el transform ya que usamos left absoluto */
-    
+    transform: none;
+    /* Eliminado el transform ya que usamos left absoluto */
+
 }
 
 
 /* Contenedor de botones del header */
 .header-buttons {
     position: relative;
-    z-index: 2; /* Asegura que esté por encima del overlay */
+    z-index: 2;
+    /* Asegura que esté por encima del overlay */
 }
 
 /* Estilo para el enlace del botón */
@@ -190,13 +223,15 @@ header h1 .floating-text-international-label {
     background-color: transparent;
     font-size: 1rem;
     font-weight: bold;
-    cursor: pointer; /* Añade el cursor pointer */
+    cursor: pointer;
+    /* Añade el cursor pointer */
     transition: all 0.3s ease;
 }
 
 /* Estilo hover para el botón */
 .reservation-button button:hover {
-    background-color: #00bfff; /* Color azul claro */
+    background-color: #00bfff;
+    /* Color azul claro */
     color: white;
     transform: scale(1.05);
 }
@@ -209,12 +244,18 @@ header h1 .floating-text-international-label {
 
 .line-button {
     display: inline-flex;
-    text-decoration: none; /* Elimina el subrayado */
-    color: #25d366; /* Color verde característico de LINE */
-    font-size: 1rem; /* Tamaño de la fuente */
-    font-weight: bold; /* Texto en negrita */
-    margin: 10px 0; /* Espacio entre botones */
-    transition: color 0.3s ease; /* Transición suave en el color */
+    text-decoration: none;
+    /* Elimina el subrayado */
+    color: #25d366;
+    /* Color verde característico de LINE */
+    font-size: 1rem;
+    /* Tamaño de la fuente */
+    font-weight: bold;
+    /* Texto en negrita */
+    margin: 10px 0;
+    /* Espacio entre botones */
+    transition: color 0.3s ease;
+    /* Transición suave en el color */
 }
 
 /* estilo de las redes sociales */
@@ -222,18 +263,22 @@ header h1 .floating-text-international-label {
     position: relative;
     top: -255px;
     left: 610px;
-    font-size: 0.8rem; 
+    font-size: 0.8rem;
     color: #ffffff;
     margin-bottom: 1px;
 }
+
 /* Estilo para el ícono dentro del enlace */
 .line-button img {
     position: relative;
     top: -230px;
     left: 675px;
-    width: 38px; /* Tamaño pequeño del ícono */
-    height: 38px; /* Mantiene la proporción */
-    margin-right: 1px; /* Espacio entre el ícono y el texto */
+    width: 38px;
+    /* Tamaño pequeño del ícono */
+    height: 38px;
+    /* Mantiene la proporción */
+    margin-right: 1px;
+    /* Espacio entre el ícono y el texto */
 }
 
 /* Contenedor de botón de traducción */
@@ -252,7 +297,8 @@ header h1 .floating-text-international-label {
 /* Texto encima del ícono de Google Translate */
 .translate-button .translate-text {
     position: absolute;
-    top: -230px; /* Ajusta para la distancia deseada del ícono */
+    top: -230px;
+    /* Ajusta para la distancia deseada del ícono */
     left: 855px;
     color: white;
     font-size: 0.8rem;
@@ -265,13 +311,16 @@ header h1 .floating-text-international-label {
     position: relative;
     top: -180px;
     left: 810px;
-    width: 34px; /* Tamaño pequeño del ícono */
-    height: 34px; /* Mantiene la proporción */
+    width: 34px;
+    /* Tamaño pequeño del ícono */
+    height: 34px;
+    /* Mantiene la proporción */
 }
 
 
 #reservaciones {
-    display: none; /* Oculta la sección por defecto */
+    display: none;
+    /* Oculta la sección por defecto */
 }
 
 
@@ -279,14 +328,17 @@ header h1 .floating-text-international-label {
 header nav {
     position: relative;
     z-index: 1;
-    top: -427px; /* Cambia este valor según la posición deseada de nav */
-    left: 530px; /* Cambia este valor según la posición deseada de nav */
+    top: -427px;
+    /* Cambia este valor según la posición deseada de nav */
+    left: 530px;
+    /* Cambia este valor según la posición deseada de nav */
 }
 
 /*Acerca de nosotros*/
 .welcome {
     width: 100%;
-    height: 100vh; /* Cambiado de min-height a height */
+    height: 100vh;
+    /* Cambiado de min-height a height */
     background-color: #000;
     color: #fff;
     font-family: 'Shippori Mincho', serif;
@@ -299,10 +351,14 @@ header nav {
 }
 
 .menu-title {
-    font-size: 0; /* Oculta el tamaño del texto */
-    line-height: 0; /* Elimina el espacio vertical */
-    visibility: hidden; /* Hace que el texto sea invisible */
-    position: absolute; /* Mantiene la posición relativa para el desplazamiento */
+    font-size: 0;
+    /* Oculta el tamaño del texto */
+    line-height: 0;
+    /* Elimina el espacio vertical */
+    visibility: hidden;
+    /* Hace que el texto sea invisible */
+    position: absolute;
+    /* Mantiene la posición relativa para el desplazamiento */
 
 }
 
@@ -310,14 +366,19 @@ header nav {
 
 /* Estilos del menú */
 .menu-container {
-    display: flex; /* Usamos flexbox para facilitar la alineación */
-    flex-direction: column; /* Colocamos los elementos en columna */
-    align-items: flex-start; /* Alineamos todos los elementos al inicio (izquierda) */
+    display: flex;
+    /* Usamos flexbox para facilitar la alineación */
+    flex-direction: column;
+    /* Colocamos los elementos en columna */
+    align-items: flex-start;
+    /* Alineamos todos los elementos al inicio (izquierda) */
 }
 
 .menu-title {
-    align-self: flex-end; /* Alineamos el título del menú a la derecha */
-    margin-bottom: 20px; /* Espacio debajo del título del menú */
+    align-self: flex-end;
+    /* Alineamos el título del menú a la derecha */
+    margin-bottom: 20px;
+    /* Espacio debajo del título del menú */
 }
 
 /* Efecto de difuminado en la parte inferior de la sección de bienvenida */
@@ -327,7 +388,8 @@ header nav {
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 50px; /* Ajusta según el tamaño deseado */
+    height: 50px;
+    /* Ajusta según el tamaño deseado */
     background: linear-gradient(to top, rgba(-2, -3, -4, 0.5), rgba(0, 0, 0, 0));
     z-index: 2;
 }
@@ -339,7 +401,8 @@ header nav {
     top: 0;
     left: 0;
     width: 100%;
-    height: 50px; /* Ajusta según el tamaño deseado */
+    height: 50px;
+    /* Ajusta según el tamaño deseado */
     background: linear-gradient(to bottom, rgba(-2, -3, -4, 0.5), rgba(0, 0, 0, 0));
     z-index: 2;
 }
@@ -352,26 +415,30 @@ header nav {
 }
 
 .menu-item {
-    min-height: 1000px; /* Aumenta la altura según el diseño que quieras */
+    min-height: 1000px;
+    /* Aumenta la altura según el diseño que quieras */
     background-attachment: fixed;
-    background-size: cover; /* Ajusta más la imagen para que sea más vertical y algo horizontal */
-    background-position: center top; /* Posición inicial de la imagen */
+    background-size: cover;
+    /* Ajusta más la imagen para que sea más vertical y algo horizontal */
+    background-position: center top;
+    /* Posición inicial de la imagen */
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white; /* Color del texto */
+    color: white;
+    /* Color del texto */
 }
 
 #taco-wagyu {
-    background-image: url(BANCOim/FONDO.jpg); 
+    background-image: url(BANCOim/FONDO.jpg);
 }
 
 #sashimi-atun {
-    background-image: url(BANCOim/japon.webp); 
+    background-image: url(BANCOim/japon.webp);
 }
 
 #tepanyaki {
-    background-image: url(BANCOim/fondo2.jpg); 
+    background-image: url(BANCOim/fondo2.jpg);
 }
 
 /* Estilo del item menu */
@@ -386,7 +453,8 @@ header nav {
     background-position: center;
     color: white;
     overflow: hidden;
-    font-family: 'Sawarabi Mincho', serif; /* Fuente japonesa */
+    font-family: 'Sawarabi Mincho', serif;
+    /* Fuente japonesa */
 }
 
 #taco-wagyu img {
@@ -409,32 +477,44 @@ header nav {
     margin-left: 50%;
     max-width: 50%;
     /* Justificar el texto */
-    text-align: justify; 
+    text-align: justify;
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Alinea los elementos hacia la izquierda */
+    align-items: flex-start;
+    /* Alinea los elementos hacia la izquierda */
 }
 
 #taco-wagyu h3 {
     position: absolute;
-    top: -6cm; /* Ajuste de la posición vertical */
-    left: -12cm; /* Ajuste de la posición horizontal */
-    font-size: 5em; /* Tamaño grande para destacar */
+    top: -6cm;
+    /* Ajuste de la posición vertical */
+    left: -12cm;
+    /* Ajuste de la posición horizontal */
+    font-size: 5em;
+    /* Tamaño grande para destacar */
     color: rgba(255, 255, 255, 0.9);
     white-space: nowrap;
-    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6); /* Sombra para resaltar el texto */
-    max-width: 90%; /* Controla el ancho máximo */
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6);
+    /* Sombra para resaltar el texto */
+    max-width: 90%;
+    /* Controla el ancho máximo */
 }
 
 #taco-wagyu p {
     position: absolute;
-    top: -3cm; /* Ajustar la posición vertical */
-    left: -11.6cm; /* Ajustar la posición horizontal */
-    font-size: 1.5em; /* Ajustar el tamaño */
+    top: -3cm;
+    /* Ajustar la posición vertical */
+    left: -11.6cm;
+    /* Ajustar la posición horizontal */
+    font-size: 1.5em;
+    /* Ajustar el tamaño */
     color: rgba(255, 255, 255, 0.85);
-    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5); /* Sombra para resaltar el texto */
-    margin: 0; /* Aseguramos que no haya márgenes adicionales */
-    white-space: normal; /* Asegura que el texto no se estire ni se contenga en un solo bloque */
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+    /* Sombra para resaltar el texto */
+    margin: 0;
+    /* Aseguramos que no haya márgenes adicionales */
+    white-space: normal;
+    /* Asegura que el texto no se estire ni se contenga en un solo bloque */
 }
 
 
@@ -446,7 +526,8 @@ header nav {
     color: #fafafa;
     margin-top: 10px;
     text-align: right;
-    width: 100%; /* Asegura que el precio ocupe todo el espacio */
+    width: 100%;
+    /* Asegura que el precio ocupe todo el espacio */
 }
 
 /* Animación de texto flotante */
@@ -455,6 +536,7 @@ header nav {
         transform: translateX(100%);
         opacity: 0;
     }
+
     100% {
         transform: translateX(0);
         opacity: 1;
@@ -498,7 +580,8 @@ header nav {
     background-position: center;
     color: white;
     overflow: hidden;
-    font-family: 'Sawarabi Mincho', serif; /* Fuente japonesa */
+    font-family: 'Sawarabi Mincho', serif;
+    /* Fuente japonesa */
 }
 
 
@@ -519,19 +602,24 @@ header nav {
     padding: 20px;
     margin-left: 50%;
     max-width: 50%;
-    text-align: justify; 
+    text-align: justify;
     display: flex;
 }
 
 #sashimi-atun h3 {
     position: absolute;
-    top: -4.4cm; /* Ajuste de la posición vertical */
-    left: -0.5cm; /* Ajuste de la posición horizontal */
-    font-size: 3em; /* Tamaño grande para destacar */
+    top: -4.4cm;
+    /* Ajuste de la posición vertical */
+    left: -0.5cm;
+    /* Ajuste de la posición horizontal */
+    font-size: 3em;
+    /* Tamaño grande para destacar */
     color: rgba(255, 255, 255, 0.9);
     white-space: nowrap;
-    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6); /* Sombra para resaltar el texto */
-    max-width: 90%; /* Controla el ancho máximo */
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6);
+    /* Sombra para resaltar el texto */
+    max-width: 90%;
+    /* Controla el ancho máximo */
 }
 
 #sashimi-atun p {
@@ -543,10 +631,14 @@ header nav {
     text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
     color: rgba(255, 255, 255, 0.85);
     margin: 0;
-    width: 600px;        /* Ancho fijo en píxeles para controlar mejor el espacio */
-    white-space: normal; /* Permite que el texto fluya normalmente */
-    text-align: left;    /* Alineación a la izquierda */
-    display: inline;     /* Cambiado a inline para mejor flujo del texto */
+    width: 600px;
+    /* Ancho fijo en píxeles para controlar mejor el espacio */
+    white-space: normal;
+    /* Permite que el texto fluya normalmente */
+    text-align: left;
+    /* Alineación a la izquierda */
+    display: inline;
+    /* Cambiado a inline para mejor flujo del texto */
 }
 
 #sashimi-atun .item-content .price {
@@ -557,7 +649,8 @@ header nav {
     color: #fafafa;
     margin-top: 10px;
     text-align: right;
-    width: 100%; /* Asegura que el precio ocupe todo el espacio */
+    width: 100%;
+    /* Asegura que el precio ocupe todo el espacio */
 }
 
 /* Animación de texto flotante */
@@ -566,6 +659,7 @@ header nav {
         transform: translateX(100%);
         opacity: 0;
     }
+
     100% {
         transform: translateX(0);
         opacity: 1;
@@ -606,7 +700,8 @@ header nav {
 
 #tepanyaki img {
     position: absolute;
-    left: 61.7%;    /* Mantenemos left para el posicionamiento principal */
+    left: 61.7%;
+    /* Mantenemos left para el posicionamiento principal */
     top: 50%;
     width: 79%;
     height: 95%;
@@ -641,8 +736,10 @@ header nav {
     text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
     margin: 0;
     white-space: normal;
-    width: 290px; /* Ajusta el ancho según el espacio que necesites */
-    text-align: left; /* Alineación del texto */
+    width: 290px;
+    /* Ajusta el ancho según el espacio que necesites */
+    text-align: left;
+    /* Alineación del texto */
 }
 
 #tepanyaki .item-content .price {
@@ -654,7 +751,8 @@ header nav {
     color: #fafafa;
     margin-top: 10px;
     text-align: right;
-    width: 100%; /* Asegura que el precio ocupe todo el espacio */
+    width: 100%;
+    /* Asegura que el precio ocupe todo el espacio */
 }
 
 #tepanyaki .floating-text {
@@ -699,7 +797,7 @@ section {
     margin: 0;
     padding: 0;
     background-color: rgb(247, 247, 247);
-   
+
 }
 
 button {
@@ -717,7 +815,8 @@ button:hover {
 
 .barra-reserva {
     position: fixed;
-    bottom: -100px; /* Inicialmente oculta debajo de la página */
+    bottom: -100px;
+    /* Inicialmente oculta debajo de la página */
     left: 0;
     width: 100%;
     background-color: rgba(255, 255, 255, 0.95);
@@ -728,7 +827,8 @@ button:hover {
 }
 
 .barra-reserva.visible {
-    bottom: 0; /* Cuando está visible */
+    bottom: 0;
+    /* Cuando está visible */
 }
 
 #formulario-reserva {
@@ -772,42 +872,61 @@ button:hover {
         flex-direction: column;
         gap: 10px;
     }
-    
+
     .barra-reserva {
         padding: 15px;
     }
 }
+
 /* Estilos para la seccion de fotos dinamicas */
 
 /* Estilos para la sección de fotos dinámicas */
 .fotos-dinamicas {
-    margin: 0; /* Elimina márgenes */
-    padding: 0; /* Elimina el espaciado superior e inferior */
-    width: 100vw; /* Ancho completo de la ventana */
-    height: 100vh; /* Altura completa de la ventana */
-    overflow: hidden; /* Oculta cualquier contenido que se salga del contenedor */
+    margin: 0;
+    /* Elimina márgenes */
+    padding: 0;
+    /* Elimina el espaciado superior e inferior */
+    width: 100vw;
+    /* Ancho completo de la ventana */
+    height: 100vh;
+    /* Altura completa de la ventana */
+    overflow: hidden;
+    /* Oculta cualquier contenido que se salga del contenedor */
 }
 
 .galeria {
-    display: flex; /* Usar flexbox para posicionar el contenido */
-    justify-content: center; /* Centrar horizontalmente */
-    align-items: center; /* Centrar verticalmente */
-    width: 100%; /* Ancho completo */
-    height: 100%; /* Altura completa */
-    position: relative; /* Para posicionar las imágenes de forma absoluta */
+    display: flex;
+    /* Usar flexbox para posicionar el contenido */
+    justify-content: center;
+    /* Centrar horizontalmente */
+    align-items: center;
+    /* Centrar verticalmente */
+    width: 100%;
+    /* Ancho completo */
+    height: 100%;
+    /* Altura completa */
+    position: relative;
+    /* Para posicionar las imágenes de forma absoluta */
 }
 
 .foto {
-    position: absolute; /* Las imágenes se colocan encima de otras */
-    width: 100%; /* Ancho completo de la pantalla */
-    height: 100%; /* Altura completa de la pantalla */
-    object-fit: cover; /* Las imágenes se expanden para llenar el contenedor */
-    opacity: 0; /* Inicialmente ocultas */
-    transition: opacity 1s ease; /* Transición para el efecto de aparición */
+    position: absolute;
+    /* Las imágenes se colocan encima de otras */
+    width: 100%;
+    /* Ancho completo de la pantalla */
+    height: 100%;
+    /* Altura completa de la pantalla */
+    object-fit: cover;
+    /* Las imágenes se expanden para llenar el contenedor */
+    opacity: 0;
+    /* Inicialmente ocultas */
+    transition: opacity 1s ease;
+    /* Transición para el efecto de aparición */
 }
 
 .foto.active {
-    opacity: 1; /* La imagen activa es visible */
+    opacity: 1;
+    /* La imagen activa es visible */
 }
 
 
@@ -821,9 +940,10 @@ button:hover {
     padding: 50px 0;
 }
 
-.about, .location {
+.about,
+.location {
     width: 100%;
-    
+
     padding: 100px;
     max-width: 1000px;
     margin: auto;
@@ -843,7 +963,3 @@ footer {
     text-align: center;
     padding: 10px 0;
 }
-
-
-
-
