@@ -82,6 +82,6 @@ Sigue los pasos a continuación para clonar y ejecutar este proyecto en tu máqu
    ```bash
    git --version
 
-git clone https://github.com/tuusuario/tu-repositorio.git
+git clone ""
 
 cd tu-repositorio
