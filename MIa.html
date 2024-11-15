@@ -4,174 +4,238 @@ Doctype le dice al navegador que el documento está escrito en HTML5.
 -->
 <!DOCTYPE html>
 <html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
     <title>Taco-San | Cocina Japonesa y Mexicana</title>
-    <link rel="stylesheet" href="MIa.css">
+    <link rel="stylesheet" href="MIa.css" />
     <!-- Agregar Google Font para estilo japonés -->
-    <link href="https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap"
+      rel="stylesheet"
+    />
     <!-- Agregar favicon (logo en la pestaña) -->
-    <link rel="icon" href="BANCOim/logo-taco-san.webp" type="image/png">>
-</head>
+    <link rel="icon" href="BANCOim/logo-taco-san.webp" type="image/png" />
+  </head>
 
-<body>
+  <body>
     <!-- Encabezado con video de fondo y navegación -->
     <header class="header">
-        <video autoplay muted loop playsinline class="background-video" id="background-video">
-            <source src="VR/video-restaurante.mp4" type="video/mp4">
-            Tu navegador no soporta videos.
-        </video>
-        <div class="overlay"></div>
-        <!-- Texto y botones con iconos en la parte superior -->
-        <div class="top-text">
-            <a href="https://translate.google.com/?sl=es&tl=ja&op=translate" target="_blank" class="translate-button" aria-label="Google Translate">
-                <img src="BANCOim/traducir.png" alt="Google Translate">
-                <span class="translate-text">Click para traducir</span>
-            </a>
-            <a href="https://line.me/ti/p/~your-line-id" target="_blank" class="line-button" aria-label="LINE">
-                <img src="BANCOim/line.png" alt="LINE">
-                <span class="line-text">Redes sociales</span> <!-- Texto encima del icono -->
-            </a>
-        </div>
-        <h1>
-            <span class="main-title">タコ・サン</span>
-            <span class="floating-text-1">さらに、メキシコ大使館が作成した地図も便利です。これには</span>
-            <span class="floating-text-2">チップスなどのメキシコ料理が日本でどのように人気を集めているかが説明されています</span>
+      <video
+        autoplay
+        muted
+        loop
+        playsinline
+        class="background-video"
+        id="background-video"
+      >
+        <source src="VR/video-restaurante.mp4" type="video/mp4" />
+        <source src="VR/video-restaurante.webm" type="video/webm" />
+        Tu navegador no soporta videos.
+      </video>
+      <div class="overlay"></div>
+      <!-- Texto y botones con iconos en la parte superior -->
+      <div class="top-text">
+        <a
+          href="https://translate.google.com/?sl=es&tl=ja&op=translate"
+          target="_blank"
+          class="translate-button"
+          aria-label="Google Translate"
+        >
+          <img src="BANCOim/traducir.png" alt="Google Translate" />
+          <span class="translate-text">Click para traducir</span>
+        </a>
+        <a
+          href="https://line.me/ti/p/~your-line-id"
+          target="_blank"
+          class="line-button"
+          aria-label="LINE"
+        >
+          <img src="BANCOim/line.png" alt="LINE" />
+          <span class="line-text">Redes sociales</span>
+          <!-- Texto encima del icono -->
+        </a>
+      </div>
+      <h1>
+        <span class="main-title">タコ・サン</span>
+        <span class="floating-text-1"
+          >さらに、メキシコ大使館が作成した地図も便利です。これには</span
+        >
+        <span class="floating-text-2"
+          >チップスなどのメキシコ料理が日本でどのように人気を集めているかが説明されています</span
+        >
 
-            <span class="floating-text-japan-number">+81 123-4567-8901</span>
-            <span class="floating-text-japan-label">Llamada local, Japón</span>
-            
-            <span class="floating-text-international-number">+52 987-6543-210</span>
-            <span class="floating-text-international-label">Llamada internacional</span>
+        <span class="floating-text-japan-number">+81 123-4567-8901</span>
+        <span class="floating-text-japan-label">Llamada local, Japón</span>
 
-            <span class="floating-text-reservation">
-                Para reservaciones y preguntas, llámenos a alguno de los números. <br>
-                Si es extranjero, haga clic en el menú para turistas. <br>
-                Para más información, contáctenos por Line
-            </span>
-        </h1>
-        <nav>
+        <span class="floating-text-international-number">+52 987-6543-210</span>
+        <span class="floating-text-international-label"
+          >Llamada internacional</span
+        >
 
-            <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#menu">Menú</a></li>
-                <li><a href="turista/Mia-turistas.html" target="_blank">Turistas</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-        </nav>
-         <!-- Botones en el header -->
-         <div class="header-buttons">
-            <!-- Botón para reservas online -->
-            <a href="formulario/Mia-formulario.html" class="reservation-button" aria-label="Online Reservation">
-                <button>Online Reservation Here</button>
-            </a>
-            </div>
+        <span class="floating-text-reservation">
+          Para reservaciones y preguntas, llámenos a alguno de los números.
+          <br />
+          Si es extranjero, haga clic en el menú para turistas. <br />
+          Para más información, contáctenos por Line
+        </span>
+      </h1>
+      <nav>
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#menu">Menú</a></li>
+          <li>
+            <a href="turista/Mia-turistas.html" target="_blank">Turistas</a>
+          </li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+      <!-- Botones en el header -->
+      <div class="header-buttons">
+        <!-- Botón para reservas online -->
+        <a
+          href="formulario/Mia-formulario.html"
+          class="reservation-button"
+          aria-label="Online Reservation"
+        >
+          <button>Online Reservation Here</button>
+        </a>
+      </div>
     </header>
 
     <main id="main">
-            <!-- Sección de Reservaciones -->
-    <section id="reservaciones">
+      <!-- Sección de Reservaciones -->
+      <section id="reservaciones">
         <!-- Contenido de la Sección Reservaciones -->
         <h2>Realiza tu reservación</h2>
-    </section>
+      </section>
 
-        <!-- Sección de Bienvenida -->
-        <section class="welcome" id="inicio">
-            <h2>¡Bienvenido a Taco-San!</h2>
-            <p>Donde el arte culinario japonés y mexicano se fusionan en cada plato.</p>
-        </section>
-        
-  
-        <!-- Sección de Promociones -->
-        <section class="fotos-dinamicas" id="fotos-dinamicas">
-            <div class="galeria">
-                <img src="BANCOim/Home.png" class="foto" alt="Promoción principal">
-                <img src="BANCOim/Food Promotion.png" class="foto" alt="Promoción de comida">
-                <img src="BANCOim/Red Yellow Illustration Modern Food Ramen Promotion Flyer.png" class="foto" alt="Promoción de ramen">
-            </div>
-        </section>
+      <!-- Sección de Bienvenida -->
+      <section class="welcome" id="inicio">
+        <h2>¡Bienvenido a Taco-San!</h2>
+        <p>
+          Donde el arte culinario japonés y mexicano se fusionan en cada plato.
+        </p>
+      </section>
 
-        <!-- Sección de Menú -->
-        <section class="parallax" id="menu">
-            <div class="menu-container">
-                <h2 class="menu-title">Menú</h2>
-            </div>
+      <!-- Sección de Promociones -->
+      <section class="fotos-dinamicas" id="fotos-dinamicas">
+        <div class="galeria">
+          <img src="BANCOim/Home.png" class="foto" alt="Promoción principal" />
+          <img
+            src="BANCOim/Food Promotion.png"
+            class="foto"
+            alt="Promoción de comida"
+          />
+          <img
+            src="BANCOim/Red Yellow Illustration Modern Food Ramen Promotion Flyer.png"
+            class="foto"
+            alt="Promoción de ramen"
+          />
+        </div>
+      </section>
 
-            <!-- Item de Menú: Taco de Wagyu -->
-            <div class="menu-item" id="taco-wagyu">
-                <img src="BANCOim/taco-de-wagyu.png" class="hover-image" alt="Imagen de Taco de Wagyu">
-                <div class="item-content">
-                    <h3>Taco de Wagyu</h3>
-                    <p>Disfruta de nuestro taco de wagyu, una experiencia culinaria única.</p>
-                    <p class="price">¥1,500</p>
-                </div>
-                <!-- Texto flotante en japonés -->
-                <span class="floating-text">タコ・和牛</span>
-            </div>
+      <!-- Sección de Menú -->
+      <section class="parallax" id="menu">
+        <div class="menu-container">
+          <h2 class="menu-title">Menú</h2>
+        </div>
 
-            <!-- Item de Menú: Sashimi de Atún con Chile -->
-            <div class="menu-item" id="sashimi-atun">
-                <img src="BANCOim/sashimi-de-atun-con-chile-icon.webp" class="hover-image" alt="Imagen de Sashimi de Atún">
-                <div class="item-content">
-                    <h3>Sashimi de Atún con Chile</h3>
-                    <p>Disfruta de nuestro taco de wagyu, una experiencia culinaria única.</p>
-                    <p class="price">¥2,500</p>
-                </div>
-                <!-- Texto flotante en japonés -->
-                <span class="floating-text">チリ付きマグロの刺身</span>
-            </div>
+        <!-- Item de Menú: Taco de Wagyu -->
+        <div class="menu-item" id="taco-wagyu">
+          <img
+            src="BANCOim/taco-de-wagyu.png"
+            class="hover-image"
+            alt="Imagen de Taco de Wagyu"
+          />
+          <div class="item-content">
+            <h3>Taco de Wagyu</h3>
+            <p>
+              Disfruta de nuestro taco de wagyu, una experiencia culinaria
+              única.
+            </p>
+            <p class="price">¥1,500</p>
+          </div>
+          <!-- Texto flotante en japonés -->
+          <span class="floating-text">タコ・和牛</span>
+        </div>
 
-            <!-- Item de Menú: Tepanyaki con Salsa de Jalapeño -->
-            <div class="menu-item" id="tepanyaki">
-                <img src="BANCOim/tepanyaki-con-salsa-de-jalapeño-icon.webp" class="hover-image" alt="Imagen de Tepanyaki">
-                <div class="item-content">
-                    <h3>Tepanyaki con Salsa de Jalapeño</h3>
-                    <p>Deliciosas opciones de teppanyaki con un toque picante.</p>
-                    <p class="price">¥1,500</p>
-                </div>
-                <span class="floating-text">鉄板焼き</span>
-            </div>
-        </section>
+        <!-- Item de Menú: Sashimi de Atún con Chile -->
+        <div class="menu-item" id="sashimi-atun">
+          <img
+            src="BANCOim/sashimi-de-atun-con-chile-icon.webp"
+            class="hover-image"
+            alt="Imagen de Sashimi de Atún"
+          />
+          <div class="item-content">
+            <h3>Sashimi de Atún con Chile</h3>
+            <p>
+              Disfruta de nuestro taco de wagyu, una experiencia culinaria
+              única.
+            </p>
+            <p class="price">¥2,500</p>
+          </div>
+          <!-- Texto flotante en japonés -->
+          <span class="floating-text">チリ付きマグロの刺身</span>
+        </div>
 
-        <!-- Mapa de ubicación -->
-        <section class="location">
-            <h2>Encuéntranos</h2>
-            <div class="map">
-                <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.6019654800384!2d139.70212477641926!3d35.67174847968525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188c9c60ef1d1d%3A0x3d12f44e5e0c57b6!2sHarajuku%2C%20Tokio%2C%20Jap%C3%B3n!5e0!3m2!1ses!2smx!4v1698600000000"
-                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-            </div>
-        </section>
+        <!-- Item de Menú: Tepanyaki con Salsa de Jalapeño -->
+        <div class="menu-item" id="tepanyaki">
+          <img
+            src="BANCOim/tepanyaki-con-salsa-de-jalapeño-icon.webp"
+            class="hover-image"
+            alt="Imagen de Tepanyaki"
+          />
+          <div class="item-content">
+            <h3>Tepanyaki con Salsa de Jalapeño</h3>
+            <p>Deliciosas opciones de teppanyaki con un toque picante.</p>
+            <p class="price">¥1,500</p>
+          </div>
+          <span class="floating-text">鉄板焼き</span>
+        </div>
+      </section>
 
-        <!-- Sección de contacto -->
-        <section id="contacto">
-            <h2>Contáctanos</h2>
-            <p>Email: contacto@taco-san.com</p>
-            <p>Teléfono: +52 123 456 7890</p>
-        </section>
+      <!-- Mapa de ubicación -->
+      <section class="location">
+        <h2>Encuéntranos</h2>
+        <div class="map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.6019654800384!2d139.70212477641926!3d35.67174847968525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188c9c60ef1d1d%3A0x3d12f44e5e0c57b6!2sHarajuku%2C%20Tokio%2C%20Jap%C3%B3n!5e0!3m2!1ses!2smx!4v1698600000000"
+            width="600"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+          ></iframe>
+        </div>
+      </section>
 
+      <!-- Sección de contacto -->
+      <section id="contacto">
+        <h2>Contáctanos</h2>
+        <p>Email: contacto@taco-san.com</p>
+        <p>Teléfono: +52 123 456 7890</p>
+      </section>
     </main>
 
     <!-- Pie de página -->
     <footer>
-        <p>&copy; 2024 Taco-San. Todos los derechos reservados.</p>
+      <p>&copy; 2024 Taco-San. Todos los derechos reservados.</p>
     </footer>
 
     <!-- Barra de reservación -->
     <div class="barra-reserva">
-        <form id="formulario-reserva">
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" required>
-            <label for="fecha">Fecha:</label>
-            <input type="date" id="fecha" required>
-            <button type="submit">Reservar</button>
-        </form>
+      <form id="formulario-reserva">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" required />
+        <label for="fecha">Fecha:</label>
+        <input type="date" id="fecha" required />
+        <button type="submit">Reservar</button>
+      </form>
     </div>
 
     <!-- Archivo JavaScript -->
     <script src="MIa.js"></script>
-</body>
-
+  </body>
 </html>
