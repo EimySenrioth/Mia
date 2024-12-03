@@ -10,145 +10,102 @@ body, html {
     width: 100%;
     height: 100%;
     display: flex;
-    flex-direction: column; /* Asegura que los elementos se apilen verticalmente */
-    align-items: center;
-    justify-content: flex-start; /* Asegura que todo se alinee hacia arriba */
+    flex-direction: column;
+    align-items: center; /* Mantener el centrado horizontal */
+    justify-content: flex-start;
     color: #fff;
-}
-
-/* Fondo de la página */
-body {
     background: url('../BANCOim/nuestros-chefs.webp') no-repeat center center fixed;
     background-size: cover;
-    backdrop-filter: brightness(0.7);
+    backdrop-filter: brightness(0.5);
     text-align: center;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; /* Para separar el contenido y footer */
 }
-
 /* Título */
 h1 {
-    font-size: 3em; /* Ajusta el tamaño del título */
-    color: #fff;
-    margin-top: 10%; /* Ajusta el espacio desde la parte superior */
-    margin-bottom: 0.5em; /* Ajusta el espacio inferior */
-    text-align: center;
+    font-size: 3em;
+    margin: 20px 0;
 }
 
-/* Párrafo debajo del título */
 p {
     font-size: 1.2em;
-    color: #fff;
-    margin-bottom: 1.5em; /* Espacio entre el párrafo y el formulario */
-    text-align: center;
-    position: relative;
-    top: 40px;
+    margin-bottom: 1.5em;
 }
 
-/* Contenedor principal - debe ser relativo para que los elementos absolutos se posicionen respecto a él */
-.container {
-    position: relative;
+/* Formulario principal */
+.reservation-form {
     width: 100%;
-    height: 100vh;
-    background: url('../BANCOim/nuestros-chefs.webp') no-repeat center center fixed;
-    background-size: cover;
+    max-width: 800px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 50px;
+    border-radius: 9px;
 }
 
-/* Estilos base para los elementos del formulario */
-.form-group {
-    position: absolute; /* Permite posicionamiento libre */
-    width: 300px; /* Ancho fijo para los campos */
+/* Llamada para celulares */
+@media (max-width: 767px) {
+    .reservation-form {
+        max-width: none;
+        padding: 30px;
+    }
+
+    .reservation-form input,
+    .reservation-form select,
+    .reservation-form textarea,
+    .reservation-form button {
+        font-size: 1.1em;
+        padding: 12px;
+    }
 }
 
-/* Posicionamiento individual de cada elemento */
-.nombre-container {
-    top: 50px;    /* Ajusta estos valores */
-    left: 100px;  /* según necesites */
-}
-
-.email-container {
-    top: 150px;   /* Ajusta estos valores */
-    left: 100px;  /* según necesites */
-}
-
-.fecha-container {
-    top: 250px;   /* Ajusta estos valores */
-    left: 100px;  /* según necesites */
-}
-
-.hora-container {
-    top: 350px;   /* Ajusta estos valores */
-    left: 100px;  /* según necesites */
-}
-
-.personas-container {
-    top: 450px;   /* Ajusta estos valores */
-    left: 100px;  /* según necesites */
-}
-
-.comentarios-container {
-    top: 550px;   /* Ajusta estos valores */
-    left: 100px;  /* según necesites */
-    width: 400px; /* Más ancho para el área de comentarios */
-}
-
-/* Estilos para los inputs */
-input, select, textarea {
-    width: 100%;
-    padding: 10px;
-    margin: 5px 0;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    background-color: rgba(255, 255, 255, 0.9);
-}
-
-/* Estilos para las etiquetas */
+/* Estilos para los inputs y labels */
 label {
-    color: white;
-    font-size: 16px;
-    display: block;
+    align-self: flex-start; 
     margin-bottom: 5px;
 }
 
-/* Botón de envío */
-.button-container {
-    position: absolute;
-    bottom: 50px;   /* Ajusta estos valores */
-    left: 50%;      /* según necesites */
-    transform: translateX(-50%);
-}
-
-button {
-    padding: 10px 30px;
-    background-color: #ff6347;
-    color: white;
-    border: none;
+input, select, textarea, button {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
     border-radius: 4px;
-    cursor: pointer;
+    font-size: 1em;
 }
 
-/* Ajuste del área de comentarios */
 textarea {
-    height: 100px;
     resize: vertical;
 }
 
-/* Asegura que los elementos sean visibles sobre el fondo */
-.form-group {
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 15px;
-    border-radius: 8px;
+/* Botón de envío */
+button {
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #e5533d;
 }
 
 
+
 /* Footer */
-footer {
+.footer {
+    margin-top: auto;
     width: 100%;
     text-align: center;
-    padding: 1em;
-    background-color: rgba(0, 0, 0, 0.7); /* Fondo del footer */
-    color: #fff; /* Cambia el color del texto a blanco */
+    padding: 0.2em;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+}
+
+.footer p {
+    margin: 0;
+    padding: 0;
+    font-size: 1.2em;
 }
 
