@@ -113,4 +113,47 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+// Script para el menú desplegable
+document.addEventListener('DOMContentLoaded', () => {
+    if (typeof lottie !== 'undefined') {
+        const animationContainer = document.getElementById('menu-animation');
+        const menuIconContainer = document.querySelector('.menu-icon');
+        const dropdownMenu = document.querySelector('.dropdown-menu');
+
+        const menuAnimation = lottie.loadAnimation({
+            container: animationContainer,
+            renderer: 'svg',
+            loop: false,
+            autoplay: false,
+            path: 'animation/menu.json'
+        });
+
+        let isMenuOpen = false;
+
+        menuIconContainer.addEventListener('click', (e) => {
+            e.preventDefault();
+            
+            if (!isMenuOpen) {
+                dropdownMenu.classList.add('active');
+                menuAnimation.setDirection(1);
+                menuAnimation.play();
+                isMenuOpen = true;
+            } else {
+                dropdownMenu.classList.remove('active');
+                menuAnimation.setDirection(-1);
+                menuAnimation.play();
+                isMenuOpen = false;
+            }
+        });
+
+        document.querySelector('.close-btn').addEventListener('click', () => {
+            dropdownMenu.classList.remove('active');
+            menuAnimation.setDirection(-1);
+            menuAnimation.play();
+            isMenuOpen = false;
+        });
+    } else {
+        console.error('Lottie library not loaded');
+    }
+});
 

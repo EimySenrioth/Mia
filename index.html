@@ -38,7 +38,7 @@
 <body>
     <!-- Encabezado con video de fondo y navegación -->
     <header class="header">
-        <div with="100%" class="video-container">
+        <div width="100%" class="video-container">
             <video autoplay muted loop playsinline class="background-video" id="background-video">
                 <source src="VR/video-restaurante.mp4" type="video/mp4">
                 Tu navegador no soporta videos.
@@ -49,50 +49,79 @@
         <div class="top-text">
             <a href="https://translate.google.com/?sl=es&tl=ja&op=translate" target="_blank" class="translate-button" aria-label="Google Translate">
                 <img src="BANCOim/traducir.png" alt="Google Translate">
-                <span class="translate-text">Click para traducir</span>
             </a>
             <a href="https://line.me/ti/p/~your-line-id" target="_blank" class="line-button" aria-label="LINE">
                 <img src="BANCOim/line.png" alt="LINE">
-                <span class="line-text">Redes sociales</span> <!-- Texto encima del icono -->
             </a>
         </div>
-        <h1>
-            <span class="main-title">タコ・サン</span>
-            <span class="floating-text-1">さらに、メキシコ大使館が作成した地図も便利です。これには</span>
-            <span class="floating-text-2">チップスなどのメキシコ料理が日本でどのように人気を集めているかが説明されています</span>
-
-            <span class="floating-text-japan-number">+81 123-4567-8901</span>
-            <span class="floating-text-japan-label">Llamada local, Japón</span>
-            
+        <h1><span class="main-title">タコ・サン</span></h1>
+        <div class="floating-text-container">
+            <span>さらに、メキシコ大使館が作成した地図も便利です。これには</span>
+        </div>
+        <div class="floating-text-container2">  
+            <span>チップスなどのメキシコ料理が日本でどのように人気を集めているかが説明されています</span>
+        </div>        
+        <div class="floating-text-number">
             <span class="floating-text-international-number">+52 987-6543-210</span>
+            <span class="floating-text-japan-number">-- +81 123-4567-8901</span>
+        </div>    
+        <div class="floating-text-leyenda">   
             <span class="floating-text-international-label">Llamada internacional</span>
-
+            <span class="floating-text-japan-label">Llamada local, Japón</span>
+        </div>  
             <span class="floating-text-reservation">
                 Para reservaciones y preguntas, llámenos a alguno de los números. <br>
                 Si es extranjero, haga clic en el menú para turistas. <br>
                 Para más información, contáctenos por Line
             </span>
-        </h1>
         <nav>
+        <!-- Menú desplegable -->
+        <div class="dropdown-menu">
+            <div class="close-btn">×</div>
+            <div class="dropdown-menu-content">
+                <!-- Sección de números -->
+                <div class="menu-section">
+                    <ul id="dropdown-menu-links">
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#menu">Menú</a></li>
+                        <li><a href="turista/Mia-turistas.html" target="_blank">Turistas</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+                <!-- Sección de reservaciones -->
+                <div class="menu-section">
+                    <h3>Reservaciones</h3>
+                    <div class="menu-item">
+                        <a href="formulario/Mia-formulario.html" class="reservation-button-mobile">
+                            <button>Online Reservation Here</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
 
+        <!-- Menú principal -->
+        <div id="menu main" class="menu">
             <ul>
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#menu">Menú</a></li>
                 <li><a href="turista/Mia-turistas.html" target="_blank">Turistas</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
+        </div>
         </nav>
          <!-- Botones en el header -->
          <div class="header-buttons">
-            <!-- Botón para el icono de menú -->
-            <a href="#" class="menu-icon">
-                <i class='bx bx-menu' id="menu-icon"></i> <!-- Aquí está el ícono de menú -->
-            </a>
             <!-- Botón para reservas online -->
             <a href="formulario/Mia-formulario.html" class="reservation-button" aria-label="Online Reservation">
                 <button>Online Reservation Here</button>
             </a>
             </div>
+            <!-- Animación de menu-contenedor -->
+            <a href="#" class="menu-icon">
+                <div id="menu-animation" class="animation-container"></div>
+            </a>
+
     </header>
     <main id="main">
             <!-- Sección de Reservaciones -->
@@ -196,6 +225,8 @@
 
     <!-- Archivo JavaScript -->
     <script src="MIa.js"></script>
+    <!-- Archivo de animación -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"></script>
 </body>
 
 </html>
