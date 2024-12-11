@@ -379,9 +379,14 @@ header .menu {
         background-color: rgba(255, 255, 255, 0.58); 
         border: 1px solid #ccc;
     }
+
 }
-
-
+/* Estilo para ocultar el .animation-container en pantallas grandes */
+@media screen and (min-width: 1024px) {
+    .animation-container {
+        display: none;
+    }
+}
 
 #reservaciones {
     display: none;

@@ -5,6 +5,15 @@
     box-sizing: border-box;
     font-family: Arial, sans-serif;
 }
+header {
+    background-color: rgba(51, 51, 51, 0.8); 
+    color: white;
+    text-align: center;
+    padding: 1em;
+    margin: 0; 
+    width: 100%; 
+    box-sizing: border-box; 
+}
 
 body, html {
     width: 100%;
@@ -30,36 +39,41 @@ p {
     margin-bottom: 1.5em;
 }
 
-/* Formulario principal */
+/* Formulario principal - Enhanced Centering */
 .reservation-form {
-    width: 100%;
-    max-width: 800px;
-    margin-top: 20px;
+    width: 100%; /* Full width of its container */
+    max-width: 800px; /* Maximum width */
+    margin: 20px auto; /* Top margin and auto left/right margins for horizontal centering */
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center; /* Center items horizontally within the form */
+    justify-content: center; /* Center items vertically if needed */
     gap: 10px;
     background-color: rgba(0, 0, 0, 0.6);
     padding: 50px;
     border-radius: 9px;
 }
 
-/* Llamada para celulares */
-@media (max-width: 767px) {
-    .reservation-form {
-        max-width: none;
-        padding: 30px;
-    }
-
-    .reservation-form input,
-    .reservation-form select,
-    .reservation-form textarea,
-    .reservation-form button {
-        font-size: 1.1em;
-        padding: 12px;
-    }
+/* Ensure inputs and elements inside the form are centered */
+.reservation-form > * {
+    width: 100%;
+    max-width: 500px; /* Adjust this value as needed */
 }
 
+@media (max-width: 768px) {
+    .reservation-form {
+        grid-template-columns: 1fr;
+        padding: 30px 20px;
+    }
+
+    .form-group,
+    input, 
+    select, 
+    textarea,
+    button {
+        width: 100%;
+    }
+}
 /* Estilos para los inputs y labels */
 label {
     align-self: flex-start; 
@@ -91,13 +105,109 @@ button:hover {
     background-color: #e5533d;
 }
 
+/* Reservaciones Section Styling */
+.reservaciones {
+    background-color: #f4f4f4;
+    padding: 40px 20px;
+}
+
+.lista-reservaciones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.reservacion-item {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 300px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    color: #333;
+    transition: transform 0.3s ease;
+}
+
+.reservacion-item:hover {
+    transform: scale(1.05);
+}
+
+.reservacion-item figure {
+    margin: 0;
+    position: relative;
+}
+
+.reservacion-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.reservacion-item figcaption {
+    padding: 15px;
+}
+
+.reservacion-titulo {
+    margin: 0 0 10px 0;
+    font-size: 1.2em;
+    color: #2c3e50;
+}
+
+.reservacion-descripcion {
+    margin: 0 0 10px 0;
+    color: #7f8c8d;
+    font-size: 0.9em;
+}
+
+.reservacion-precio {
+    margin: 0;
+    font-weight: bold;
+    color: #27ae60;
+    font-size: 1.1em;
+}
 
 
-/* Footer */
+
+/* Footer de Cookies */
+.cookie-footer {
+    position: fixed; /* Siempre visible al final de la pantalla */
+    bottom: 0; /* Pegado a la parte inferior */
+    left: 0;
+    right: 0;
+    background-color: #222; /* Fondo oscuro para que destaque */
+    color: #fff; /* Texto en blanco para buen contraste */
+    padding: 1em;
+    display: flex; /* Organiza el contenido de manera horizontal */
+    justify-content: space-between; /* Espacia el texto y el botón */
+    align-items: center;
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+}
+
+.cookie-footer a {
+    color: #4caf50; /* Color de enlace para que combine */
+    text-decoration: underline;
+}
+
+.cookie-footer button {
+    background-color: #4caf50; /* Verde para el botón */
+    color: white;
+    border: none;
+    padding: 0.5em 1em;
+    cursor: pointer;
+    border-radius: 4px; /* Añadido para suavizar bordes */
+}
+
+.cookie-footer button:hover {
+    background-color: #45a049; /* Efecto al pasar el ratón sobre el botón */
+}
+
+/* Footer General */
 .footer {
     margin-top: auto;
     width: 100%;
     text-align: center;
+    margin: 20px;
     padding: 0.2em;
     background-color: rgba(0, 0, 0, 0.7);
     color: #fff;
@@ -108,4 +218,5 @@ button:hover {
     padding: 0;
     font-size: 1.2em;
 }
+
 
