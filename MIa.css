@@ -449,10 +449,10 @@ header .menu {
 }
 
 .menu-item {
-    min-height: 1000px;
+    min-height: 40vh;
     background-attachment: fixed;
     background-size: cover;
-    background-position: center top;
+    background-position: center;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -472,49 +472,25 @@ header .menu {
 
 /* Estilo del item menu */
 #taco-wagyu {
-    position: relative;
-    max-width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    min-height: 700px;
-    background-size: cover;
-    background-position: center;
     color: var(--color-text-light);
-    overflow: hidden;
     font-family: 'Sawarabi Mincho', serif;
-    /* Fuente japonesa */
 }
 
 #taco-wagyu img {
-    position: absolute;
-    left: 56.7%;
-    top: 53%;
-    margin: 0;
-    width: 100%;
-    height: 100%;
+    position: relative;
+    display: flex;
+    align-self: flex-end;
+    margin: 10px;
+    width: 250px;
+    height: 250px;
     object-fit: contain;
     z-index: 1;
-    transform: translate(-50%, -50%);
-}
-
-#taco-wagyu .item-content {
-    position: relative;
-    z-index: 3;
-    padding: 20px;
-    margin-left: 50%;
-    max-width: 50%;
-    text-align: justify;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    /* Alinea los elementos hacia la izquierda */
+    transform: translate(300px, 4%);
 }
 
 #taco-wagyu h3 {
-    position: absolute;
-    top: -6cm;
-    left: -12cm;
+    position:relative;
+    align-self: center;
     font-size: var(--font-size-xlarge);
     color: rgba(var(--color-text-gray-rgb), 0.9);
     white-space: nowrap;
@@ -523,9 +499,7 @@ header .menu {
 }
 
 #taco-wagyu p {
-    position: absolute;
-    top: -3cm;
-    left: -11.6cm;
+    position: relative;
     font-size: var(--font-size-medium);
     color: rgba(var(--background-white-rgb), 0.85);
     text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
@@ -535,8 +509,7 @@ header .menu {
 
 
 #taco-wagyu .item-content .price {
-    position: absolute;
-    top: 1.3cm;
+    position: relative;
     font-size: 3.6em;
     font-weight: bold;
     color: var(--color-price);
@@ -546,28 +519,13 @@ header .menu {
     /* Asegura que el precio ocupe todo el espacio */
 }
 
-/* Animación de texto flotante */
-@keyframes slideInFromRight {
-    0% {
-        transform: translateX(100%);
-        opacity: 0;
-    }
-
-    100% {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
-
-
-
-
 #taco-wagyu .floating-text {
-    position: absolute;
-    top: 5.5cm;
-    left: 35cm;
-    font-size: 4em;
+    position: relative;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 3em;
     font-weight: bold;
+    margin: 10px;
     color: rgba(var(--background-white-rgb), 0.8);
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
     z-index: 3;
@@ -575,88 +533,11 @@ header .menu {
     opacity: 0;
     writing-mode: vertical-rl;
     white-space: nowrap;
-    transform-origin: top left;
+
 }
 
 .animate-slide {
     animation: slideInFromRight 1.5s ease-out forwards;
-}
-
-
-
-
-/* Estilo para el Sashimi de Atún con Chile */
-#sashimi-atun {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    min-height: 800px;
-    background-size: cover;
-    background-position: center;
-    color: var(--color-price);
-    overflow: hidden;
-    font-family: 'Sawarabi Mincho', serif;
-    /* Fuente japonesa */
-}
-
-
-#sashimi-atun img {
-    position: absolute;
-    left: 40%;
-    top: 53%;
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    z-index: 1;
-    transform: translate(-50%, -50%);
-}
-
-#sashimi-atun .item-content {
-    position: relative;
-    z-index: 2;
-    padding: 20px;
-    margin-left: 50%;
-    max-width: 50%;
-    text-align: justify;
-    display: flex;
-}
-
-#sashimi-atun h3 {
-    position: absolute;
-    top: -4.4cm;
-    left: -0.5cm;
-    font-size: var(--font-size-xlarge);
-    color: rgba(var(--background-white-rgb), 0.9);
-    white-space: nowrap;
-    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6);
-    max-width: 90%;
-}
-
-#sashimi-atun p {
-    position: absolute;
-    top: -1.45cm;
-    left: 3cm;
-    font-size: var(--font-size-medium);
-    line-height: 1.5;
-    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
-    color: rgba(var(--background-white-rgb), 0.85);
-    margin: 0;
-    width: 600px;
-    white-space: normal;
-    text-align: left;
-    display: inline;
-}
-
-#sashimi-atun .item-content .price {
-    position: absolute;
-    top: 1.3cm;
-    font-size: 3.6em;
-    font-weight: bold;
-    color: var(--color-price);
-    margin-top: 10px;
-    text-align: right;
-    width: 100%;
 }
 
 /* Animación de texto flotante */
@@ -672,25 +553,74 @@ header .menu {
     }
 }
 
-#sashimi-atun .floating-text {
-    position: absolute;
-    top: 11cm;
-    left: 11.3cm;
-    font-size: var(--font-size-medium);
-    font-weight: bold;
-    color: rgba(255, 255, 255, 0.8);
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
-    z-index: 3;
-    pointer-events: none;
-    opacity: 0;
-    writing-mode: vertical-rl;
-    white-space: nowrap;
-    transform-origin: top left;
+
+
+/* Estilo para el Sashimi de Atún con Chile */
+#sashimi-atun {
+    position: relative;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center;
+    min-height: 50vh; 
+    background-size: cover;
+    background-position: center;
+    color: var(--color-price);
+    overflow: hidden;
+    font-family: 'Sawarabi Mincho', serif;
+    padding: 20px; 
 }
 
-.animate-slide {
-    animation: slideInFromRight 1.5s ease-out forwards;
+#sashimi-atun img {
+    max-width: 10%; 
+    height: auto; 
+    object-fit: contain;
+    margin: 20px 0; 
 }
+
+#sashimi-atun .item-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    max-width: 800px; 
+}
+
+#sashimi-atun h3 {
+    font-size: clamp(1.5rem, 4vw, 2.5rem); 
+    color: rgba(var(--background-white-rgb), 0.9);
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6);
+    margin-bottom: 15px;
+}
+
+#sashimi-atun p {
+    font-size: clamp(1rem, 3vw, 1.2rem); 
+    line-height: 1.6;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+    color: rgba(var(--background-white-rgb), 0.85);
+    margin: 0 0 15px 0;
+    width: 100%; 
+    max-width: 600px;
+    text-align: center;
+}
+
+#sashimi-atun .item-content .price {
+    font-size: clamp(2rem, 6vw, 3.6rem); 
+    font-weight: bold;
+    color: var(--color-price);
+    margin-top: 15px;
+}
+
+#sashimi-atun .floating-text {
+    font-size: clamp(1rem, 3vw, 1.5rem); 
+    color: rgba(255, 255, 255, 0.8);
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    margin-top: 20px;
+    text-orientation: mixed;
+    writing-mode: vertical-lr;
+}
+
 
 /* Estilo para el Tepanyaki con Salsa de Jalapeño */
 #tepanyaki {
@@ -707,7 +637,6 @@ header .menu {
 #tepanyaki img {
     position: absolute;
     left: 61.7%;
-    /* Mantenemos left para el posicionamiento principal */
     top: 50%;
     width: 79%;
     height: 95%;
